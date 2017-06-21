@@ -9,7 +9,14 @@ In dieser Aufgabe musste ein Br\"uckengleichrichter aufgebaut werden und Zeit- u
     \text{Summensatz S8: } & 2sin(\alpha)cos(\beta) = sin(\alpha-\beta)+sin(\alpha+\beta) \\ \\
     a_0 &= \frac{1}{\pi}\int_0^{2\pi} |sin(t)| dt = \frac{2}{\pi}\int_0^{\pi} sin(t) dt = \frac{4}{\pi} \\ \\
     a_n &= \frac{2}{\pi}\int_0^{\pi} sin(t) * cos (nt) dt \\
-        &= \frac{1}{\pi}\int_0^{\pi} sin(t - nt) dt +  \frac{1}{\pi}\int_0^{\pi} sin(t + nt) dt\\
-        &= 
+    a_n &= \frac{1}{\pi}\int_0^{\pi} sin(t - nt) dt +  \frac{1}{\pi}\int_0^{\pi} sin(t + nt) dt\\
+    a_n &= -\frac{1}{\pi} \left[ \frac{cos(\pi(1-n))}{1-n} + \frac{cos(\pi(1+n))}{1+n} \right] \\
+    a_n &= -\frac{1}{\pi} \left[ \frac{-(-1)^n-1}{1-n} + \frac{-(-1)^n-1}{1+n} \right] \\
+    a_n &= \frac{1}{\pi} \left[ \frac{(-1)^n+1}{1-n} + \frac{-(-1)^n+1}{1+n} \right] \\
+    a_n &= \frac{2((-1)^2+1)}{\pi(1-n^2)} \\ \\
+    a_n &= \left\{\begin{array}{ll}
+            0                     \hspace{2.5cm} \text{f\"ur n ungerade}\\
+            \frac{4}{\pi(1-n^2)} \hspace{1.5cm} \text{f\"ur n gerade}
+            \end{array}\right.
   \end{align*}
 \end{center}
