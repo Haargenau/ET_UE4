@@ -35,8 +35,31 @@ In dieser Messung wurde das Hanning-Fenster verwendet, da dies ein sehr einfache
 \end{figure}
 \noindent
 In den beiden Abbildungen \ref{bsp2_dB} \& \ref{bsp2_rms} sind die Spektren des oben gezeigten Rechecksignals zu sehen. In Abbildung \ref{bsp2_dB} wurde f\"ur die y-Achse eiene Logarithmische dB Skalierung verwendet und in Abbildung \ref{bsp2_rms} eine lineare. \\
-In den Beiden Abbildungen ist der der Vorteil der dB - Skalierung deutlich zu erknnen. W\"ahrend in Abbildung \ref{bsp2_dB} die Amplitude bei $90kHz$ nur um etwar $10dB$ kleiner als die der Grundfrequnez, so ist diese in der Linearen Darstellung schon verschwindend gering. \\
-Wie erwartet stechen bei einem Symetrischen Rechteck alle Ungeraden Vielfachen der Grundfrequnez hervor.
+In den Beiden Abbildungen ist der der Vorteil der dB - Skalierung deutlich zu erknnen. W\"ahrend in Abbildung \ref{bsp2_dB} die Amplitude bei $90kHz$ nur um etwar $10dB$ kleiner als die der Grundfrequnez, so ist diese in der Linearen Darstellung schon verschwindend gering. \newpage \noindent
+Wie erwartet stechen bei einem Symetrischen Rechteck alle Ungeraden Vielfachen der Grundfrequnez hervor. Warum dies so ist l\"asst sich mathematisch leicht begr\"unden \\ \\
+Eine Rechteckfunktion ist folgenderma\ss{}en definiert:
+\begin{center}
+    $f(t) = \left\{\begin{array}{ll}
+            1        \hspace{1.5cm} 0\leq t < \pi\\
+            0        \hspace{1.5cm} \pi \leq t < 2\pi
+            \end{array}\right.$
+\end{center}
+\noindent
+Diese Funktion ist Rotationssymetrisch und somit sind alle cos-Anteile 0
+\begin{center}
+  \begin{align*}
+    a_0 &= \frac{1}{2\pi}\int_0^{\pi} 1 dt = \frac{1}{2} \\
+    b_n &= \frac{1}{2\pi}\int_0^{\pi} sin(nt) dt \\
+    b_n &= \frac{1}{2\pi} \\
+    b_n &= \frac{1}{2\pi} \left[ -\frac{cos(n\pi)}{n} + \frac{1}{n} \right] = -\frac{1}{2n\pi} \left[ (-1)^n - 1  \right] \\
+    b_n &= \left\{\begin{array}{ll}
+            0              \hspace{1.5cm} \text{f\"ur n gerade}\\
+            \frac{1}{n\pi} \hspace{1.3cm} \text{f\"ur n ungerade}
+            \end{array}\right. \\
+  \end{align*}
+\end{center}
+\noindent
+Am Ergebnis der Fourierreihe ist zu sehen, dass die Spektralanteile f\"ur alle geraden Vielfachen der Grundfrequnez 0 Eregeben, und die Amplituden der ungeraden Anteile mit dem Faktor $\frac{1}{n\pi}$ kleiner werden.
 
 \begin{figure}[H]
   \begin{center}
@@ -50,4 +73,4 @@ Wie erwartet stechen bei einem Symetrischen Rechteck alle Ungeraden Vielfachen d
   \caption{Messwerte der Hauptkomponente und der ersten 3 Nebenkomponenten}
 \end{figure}
 \noindent
-In obiger Tabelle sind die Amplitden zu der Grundrequnez und den ersten drei ungeraden Vielfachen herausgemessen worden. Man kann sehr gut erkennen, dass die Werte exponentiell kleiner werden. 
+In obiger Tabelle sind die Amplitden zu der Grundrequnez und den ersten drei ungeraden Vielfachen herausgemessen worden. Man kann sehr gut erkennen, dass die Werte exponentiell kleiner werden.
