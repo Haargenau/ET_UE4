@@ -30,5 +30,17 @@ In dieser Aufgabe sollte man sich mit mit der FFT Funktion des Oszilloskops vert
 \end{figure}
 \noindent
 Beide Darstellungen zeigen die Spektrallinie des Sinussignales bei $1kHz$ mit einer Amplitude von $0,5V_P$. In der $dBV$-Skalierung kommen auch die Signale mit kleinerer Amplitude zur geltung, weshalb auch die Störsignale (Rauschen) zu sehen sind.\\
-Um durch die FFT ein sauberes Spektrum zu erlangen, müssen verschiedene Parameter angepasst werden. So ist ist die Abtastrate (Horizontalablenkung) ausschlaggebend für die korrekte Aufzeichnung des Signales. Der gewählte Frequez
+Um durch die FFT ein sauberes Spektrum zu erlangen, müssen verschiedene Parameter angepasst werden. So ist ist die Abtastrate (Horizontalablenkung) ausschlaggebend für die korrekte Aufzeichnung des Signales. Der Frequenzbereich muss so gewählt werden, dass
+die einezelnen Spektralkomponent gut erkennbar sind.\\
+
 \subsection{Fensterfunktionen}
+
+Die Fensterfunktionen werden nach den Kriterien, minimaler Leckeffekt, Amplituden- und Frequenzgenauigkeit gewählt. Da es keine optimale Lösung gibt, die alle drei Anforderungen erfüllt, wird
+die Fensterfunktion abhängig vom Problem gewählt.\\
+Das Oszilloskop bietet vier Verschiedenen Fensterfunktion:\\
+\begin{itemize}
+ \item Rechteckfenster: \\
+ \item Hanningfenster: \\
+ \item Flache Oberseite Fenster: \\
+ \item Blackman-Harris-Fenster: \\
+\end{itemize}

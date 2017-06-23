@@ -10,14 +10,14 @@ Es sollte ein Nutzsignal auf ein Hochfrequenztes Tr\"agersignal aufmoduliert wer
  \begin{center}
   \includegraphics[height=6cm,width=12cm]{OsziBilder/bsp3_am_sin_time}
  \end{center}
- \caption{Zeitverlauf des AM-Singales, mit Sinus-Träger- und Nutzsignal}
+ \caption{Zeitverlauf des AM-Singales, mit Sinus als Träger- und Nutzsignal}
 \end{figure}
 
 \begin{figure}[H]
  \begin{center}
   \includegraphics[height=6cm,width=12cm]{OsziBilder/bsp3_am_rect_time}
  \end{center}
- \caption{Zeitverlauf des AM-Signales, mit Sinus-Träger- und Rechteck-Nutzsignal}
+ \caption{Zeitverlauf des AM-Signales, mit Sinus als Träger- und Rechteck als Nutzsignal}
 \end{figure}
 
 \subsection{Frequenzbereich}
@@ -26,14 +26,14 @@ Es sollte ein Nutzsignal auf ein Hochfrequenztes Tr\"agersignal aufmoduliert wer
  \begin{center}
   \includegraphics[height=6cm,width=12cm]{OsziBilder/bsp3_sin_rms_allCursor}
  \end{center}
- \caption{Spektraldarstellung des AM-Signales, mit Sinus-Träger- und Nutzsignal}
+ \caption{Spektraldarstellung des AM-Signales, mit Sinus als Träger- und Nutzsignal}
 \end{figure}
 
 \begin{figure}[H]
  \begin{center}
   \includegraphics[height=6cm,width=12cm]{OsziBilder/bsp3_am_rect_rms_cursor}
  \end{center}
- \caption{Spektraldarstellung des AM-Signales, mit Sinus-Träger- und Rechteck-Nutzsignal}
+ \caption{Spektraldarstellung des AM-Signales, mit Sinus als Träger- und Rechteck als Nutzsignal}
 \end{figure}
 
 \subsection{Brechnungen}
@@ -94,10 +94,3 @@ Es sollte ein Nutzsignal auf ein Hochfrequenztes Tr\"agersignal aufmoduliert wer
 	      &= 0,25 * (cos(0,999*10^6) + cos(1,001*10^6)\\
   \end{align*}
 \end{center}
-\noindent
-Die berechneten Frequenzen stimmen exakt mit den Gemessenen überein. Bei den Amplitudenwerten gibt es jedoch abweichungen, allerdings
-stimmt das Verhältnis von $0,5$ mit den Messwerten überein.\\
-\\
-Das Rechtecksignal besteht aus unendlich vielen Spektralkomponenten, daher muss das Signal vor der Abtastung mit einem Tiefpass gefilter werden,
-um Aliasing- oder Folingenffekte zu vermeiden.\\
-
