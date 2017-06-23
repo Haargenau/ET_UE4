@@ -50,16 +50,33 @@ In den beiden Abbildungen \ref{bsp4_time2V} und \ref{bsp4_time10V} sind die Zeit
     a_0 &= \frac{1}{\pi}\int_0^{2\pi} |sin(t)| dt = \frac{2}{\pi}\int_0^{\pi} sin(t) dt = \frac{4}{\pi} \\ \\
     a_n &= \frac{2}{\pi}\int_0^{\pi} sin(t) * cos (nt) dt \\
     a_n &= \frac{1}{\pi}\int_0^{\pi} sin(t - nt) dt +  \frac{1}{\pi}\int_0^{\pi} sin(t + nt) dt\\
-    a_n &= -\frac{1}{\pi} \left[ \frac{cos(\pi(1-n))}{1-n} + \frac{cos(\pi(1+n))}{1+n} \right] \\
-    a_n &= -\frac{1}{\pi} \left[ \frac{-(-1)^n-1}{1-n} + \frac{-(-1)^n-1}{1+n} \right] \\
-    a_n &= \frac{1}{\pi} \left[ \frac{(-1)^n+1}{1-n} + \frac{-(-1)^n+1}{1+n} \right] \\
-    a_n &= \frac{2((-1)^2+1)}{\pi(1-n^2)} \\ \\
+    a_n &= \frac{1}{\pi} \left[ \frac{cos(\pi(1-n))}{n-1} - \frac{cos(t(1+n))}{n+1} - \frac{1}{n-1} + \frac{1}{n+1} \right] \\
+    a_n &= \frac{1}{\pi} \left[ -\frac{cos(\pi(1-n))}{n-1} + \frac{cos(t(1+n))}{n+1} - \frac{1}{n-1} + \frac{1}{n+1} \right] \\
+    a_n &= \frac{1}{\pi} \left[ \frac{-(-1)^n (n+1) + (-1)^n (n-1) - (n+1) + (n-1)}{n^2-1} \right] \\
+    a_n &= -\frac{1}{\pi} \left[ \frac{2(-1)^n + 1}{\pi(n^2-1)} \right] \\
     a_n &= \left\{\begin{array}{ll}
             0                     \hspace{2.5cm} \text{f\"ur n ungerade}\\
-            \frac{4}{\pi(1-n^2)} \hspace{1.5cm} \text{f\"ur n gerade}
-            \end{array}\right.
+            \frac{4}{\pi(n^2-1)} \hspace{1.5cm} \text{f\"ur n gerade}
+            \end{array}\right. \\
+    |sin(\omega t)| &= \frac{2}{\pi} + \sum_{n=1}^{\infty}\frac{4}{\pi(4n^2-1)} cos(2n\omega t)
   \end{align*}
 \end{center}
+
+\begin{figure}[H]
+  \begin{center}
+    \begin{tabular}{|c|c|} \hline
+    $n$ & $V_{RMS}$ \\ \hline
+    $1$ & $1,5005V$ \\ \hline
+    $2$ & $300,1mV$ \\ \hline
+    $3$ & $128,6mV$ \\ \hline
+    $4$ & $71,5mV$ \\ \hline
+    $5$ & $45,5mV$ \\ \hline
+    \end{tabular}
+  \end{center}
+  \caption{Berechneten Amplituden der f\"unf ersten Spektralanteile} \label{bsp4_SpecCalc}
+\end{figure}
+
+
 
 \subsection{FFT}
 \begin{figure}[H]
@@ -73,14 +90,16 @@ Genau wie in den Berechnungen ist in dieser Messung zu erkennen, dass jeder zwei
 
 \begin{figure}[H]
   \begin{center}
-    \begin{tabular}{|c|c|} \hline
-    $U_0$ & $1,325V$ \\ \hline
-    $U_1$ & $231,25mV$ \\ \hline
-    $U_2$ & $75mV$ \\ \hline
-    $U_3$ & $31,25mV$ \\ \hline
-    $U_4$ & $12,2mV$ \\ \hline
+    \begin{tabular}{|c|c|c|} \hline
+    $n$ & $V_{RMS}$ & Fehler[\%] \\ \hline
+    $1$ & $1,325V$    & $11,7\%$\\ \hline
+    $2$ & $231,25mV$  & $22,9\%$\\ \hline
+    $3$ & $75mV$      & $41,7\%$\\ \hline
+    $4$ & $31,25mV$   & $56,3\%$\\ \hline
+    $5$ & $12,2mV$    & $73,2\%$\\ \hline
     \end{tabular}
   \end{center}
-  \caption{Messwerte der f\"unf gr\"o\ss{}ten Spektralen Komponenten}
+  \caption{Messwerte der f\"unf gr\"o\ss{}ten Spektralen Komponenten} \label{bsp4_SpecMess}
 \end{figure}
 \noindent
+In Tabelle \ref{bsp4_SpecMess} wurden die ersten f\"unf gro\ss{}en Spektralanteile mithilfe der Cursor Funktion gemessen und mit den in Tabelle \ref{bsp4_SpecCalc} berechneten Werten verglichen. Wie unschwer zu erkennen ist, ist der Fehler bereits beim ersten Spektralanteil mit $11,7\%$ sehr gro\ss{}, dies ist unter anderem mit dem Spannunsabfall an den Dioden in der Gleichrichter Schaltung zu begr\"unden. Je h\"oher der die Freqnuenz desto mehr unterscheiden sich die gemessenen von den berechneten Werten. Der f\"unfte Anteil hat mit einem Fehler von $73,2\%$ bereits nurmehr sehr wenig mit der berechneten Fourierreihe zu tun. 
