@@ -21,7 +21,7 @@ In dieser Aufgabe musste ein Br\"uckengleichrichter aufgebaut werden und Zeit- u
   \caption{Messschaltung}\label{bsp4_circ}
 \end{figure}
 \noindent
-In Abbildung \ref{bsp4_circ} ist der Br\"uckengleichrichter, welcher f\"ur die nachfolgenden Messungen verwendet wird, zu sehen. Der Geleichrichter besteht aus vier Dioden (1N4148). Die Ausgangsspannung am Widerstand $R_1$ kann nicht einfach abgegriffen werden, da sonst ein Teil der Schaltung \"uber die Masse des Oszilloskops kurzgeschlossen werden w\"urde. Aus diesem Grund wurde mit 2 Kan\"alen gemessen und die Masse der Tastk\"opfe wurde mit der Masse des Funktionsgenerators an einen Punkt geschalten. Anschlie\ss{}end die Differenz mit der "Math"-Funktion des Oszilloskops berrechnet.
+In Abbildung \ref{bsp4_circ} ist der Br\"uckengleichrichter, welcher f\"ur die nachfolgenden Messungen verwendet wird zu sehen. Der Gelichrichter besteht aus vier Dioden (1N4148). Die Ausgangsspannung am Widerstand $R_1$ kann nicht einfach abgegriffen werden da sonst ein Teil der Schaltung \"uber die Masse des Oszilloskops kurgeschlosswern werden w\"urde. Aus diesem Grund wurde mit 2 Kan\"alen gemessen und die Masse der Tastk\"opfe wurde mit der Masse des Funktionsgenerators an einen Punkt geschalten. Anschlie\ss{}end die Differenz mit der "Math"-Funktion des Oszilloskops berrechnet.
 
 \subsection{Messung im Zeitbereich}
 \begin{figure}[H]
@@ -39,7 +39,7 @@ In Abbildung \ref{bsp4_circ} ist der Br\"uckengleichrichter, welcher f\"ur die n
  \caption{Sinussingal $10V_{pp}$, $1kHz$}\label{bsp4_time10V}
 \end{figure}
 \noindent
-In den beiden Abbildungen \ref{bsp4_time2V} und \ref{bsp4_time10V} sind die Zeitsignale zu sehen. Die Differenz der beiden Kan\"ale ergibt den Gleichgerichteten Sinus, dieser hat die doppelte Frequenz als das Eingangssignal, jedoch den gleichen Effektivwert.
+In den beiden Abbildungen \ref{bsp4_time2V} und \ref{bsp4_time10V} sind die Zeitsignale zu sehen. Die Differenz der beiden Kan\"ale ergibt den Gleichgereichteten Sinus, dieser hat die Doppelte Frequnez als das Eingangssignal, jedoch den gleichen Effektiefwert.
 
 \subsection{Fouriereihe}
 \begin{center}

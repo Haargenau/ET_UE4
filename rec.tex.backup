@@ -34,9 +34,9 @@ In dieser Messung wurde das Hanning-Fenster verwendet, da dies ein sehr einfache
  \caption{Rechteckspannung $1V_{pp}$, $10kHz$}\label{bsp2_rms}
 \end{figure}
 \noindent
-In den beiden Abbildungen \ref{bsp2_dB} \& \ref{bsp2_rms} sind die Spektren des oben gezeigten Rechtecksignals zu sehen. In Abbildung \ref{bsp2_dB} wurde f\"ur die y-Achse eine logarithmische ($dB$) und in Abbildung \ref{bsp2_rms} eine lineare Skalierung gewählt. \\
-In den beiden Abbildungen ist der Vorteil der dB - Skalierung deutlich zu erkennen. W\"ahrend in Abbildung \ref{bsp2_dB} die Amplitude bei $90kHz$ nur um etwa $10dB$ kleiner als die der Grundfrequnez ist, so ist diese in der linearen Darstellung schon verschwindend gering. \newpage \noindent
-Wie erwartet stechen bei einem Symetrischen Rechteck alle Ungeraden Vielfachen der Grundfrequenz hervor. Warum dies so ist l\"asst sich mathematisch leicht begr\"unden \\ \\
+In den beiden Abbildungen \ref{bsp2_dB} \& \ref{bsp2_rms} sind die Spektren des oben gezeigten Rechecksignals zu sehen. In Abbildung \ref{bsp2_dB} wurde f\"ur die y-Achse eiene Logarithmische dB Skalierung verwendet und in Abbildung \ref{bsp2_rms} eine lineare. \\
+In den Beiden Abbildungen ist der der Vorteil der dB - Skalierung deutlich zu erknnen. W\"ahrend in Abbildung \ref{bsp2_dB} die Amplitude bei $90kHz$ nur um etwar $10dB$ kleiner als die der Grundfrequnez, so ist diese in der Linearen Darstellung schon verschwindend gering. \newpage \noindent
+Wie erwartet stechen bei einem Symetrischen Rechteck alle Ungeraden Vielfachen der Grundfrequnez hervor. Warum dies so ist l\"asst sich mathematisch leicht begr\"unden \\ \\
 Eine Rechteckfunktion ist folgenderma\ss{}en definiert:
 \begin{center}
     $f(t) = \left\{\begin{array}{ll}
@@ -72,4 +72,4 @@ Am Ergebnis der Fourierreihe ist zu sehen, dass die Spektralanteile f\"ur alle g
   \caption{Messwerte der Hauptkomponente und der ersten 3 Nebenkomponenten}
 \end{figure}
 \noindent
-In obiger Tabelle sind die Amplituden zu der Grundfrequenz und den ersten drei ungeraden Vielfachen gemessen worden. Man kann sehr gut erkennen, dass die Werte hyperbolisch abnehmen.
+In obiger Tabelle sind die Amplitden zu der Grundrequnez und den ersten drei ungeraden Vielfachen herausgemessen worden. Man kann sehr gut erkennen, dass die Werte exponentiell kleiner werden.
