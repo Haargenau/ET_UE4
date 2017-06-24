@@ -39,6 +39,7 @@ Es sollte ein Nutzsignal auf ein Hochfrequenztes Tr\"agersignal aufmoduliert wer
 \subsection{Brechnungen}
 
 \begin{figure}[H]
+\textbf{Messwerte:} \centering \\
  \begin{minipage}[c]{.3\textwidth}
  \centering
   \begin{tabular}{c|c}
@@ -79,7 +80,6 @@ Es sollte ein Nutzsignal auf ein Hochfrequenztes Tr\"agersignal aufmoduliert wer
   \end{tabular}
   \caption{Rechteck}
  \end{minipage}
- \caption{Messwerte}
 \end{figure}
 
 \begin{center}
@@ -98,6 +98,4 @@ Es sollte ein Nutzsignal auf ein Hochfrequenztes Tr\"agersignal aufmoduliert wer
 Die berechneten Frequenzen stimmen exakt mit den Gemessenen überein. Bei den Amplitudenwerten gibt es jedoch abweichungen, allerdings
 stimmt das Verhältnis von $0,5$ mit den Messwerten überein.\\
 \\
-Das Rechtecksignal besteht aus unendlich vielen Spektralkomponenten, daher muss das Signal vor der Abtastung mit einem Tiefpass gefilter werden,
-um Aliasing- oder Foldingeffekte zu vermeiden.\\
-
+Das Rechtecksignal besteht aus unendlich vielen Spektralkomponenten, w\"urde man nun mehrere Signale zur Daten\"ubertragung verwenden, so w\"urden eben diese Nebenkomponenten die Nachbar Kan\"ale st\"oren. Daher m\"sste das Signal vor der Abtastung mit einem Bandpass gefilter werden, um die Bandbreite des Signals zu begrenzen.\\
