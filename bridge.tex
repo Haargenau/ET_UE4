@@ -44,8 +44,8 @@ In den beiden Abbildungen \ref{bsp4_time2V} und \ref{bsp4_time10V} sind die Zeit
 \subsection{Fouriereihe}
 \begin{center}
   \begin{align*}
-    |sin(t)| & \text{ ist eine gerade Funktion} \\ \\
-    S(f) &= \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n * cos(nt) \\ \\
+    |sin(t)| & \text{ ist eine gerade Funktion} \\
+    S(f) &= \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n * cos(nt) \\
     \text{Summensatz S8: } & 2sin(\alpha)cos(\beta) = sin(\alpha-\beta)+sin(\alpha+\beta) \\ \\
     a_0 &= \frac{1}{\pi}\int_0^{2\pi} |sin(t)| dt = \frac{2}{\pi}\int_0^{\pi} sin(t) dt = \frac{4}{\pi} \\ \\
     a_n &= \frac{2}{\pi}\int_0^{\pi} sin(t) * cos (nt) dt \\
@@ -66,6 +66,7 @@ In den beiden Abbildungen \ref{bsp4_time2V} und \ref{bsp4_time10V} sind die Zeit
   \begin{center}
     \begin{tabular}{|c|c|} \hline
     $n$ & $V_{RMS}$ \\ \hline
+    $0$ & $2,2508V$ \\ \hline
     $1$ & $1,5005V$ \\ \hline
     $2$ & $300,1mV$ \\ \hline
     $3$ & $128,6mV$ \\ \hline
@@ -83,7 +84,7 @@ In den beiden Abbildungen \ref{bsp4_time2V} und \ref{bsp4_time10V} sind die Zeit
  \begin{center}
   \includegraphics[height=6cm,width=12cm]{OsziBilder/bsp4_sin_fft_10Vpp_dB.png}
  \end{center}
- \caption{Sinussingal $2V_{pp}$, $10kHz$}\label{bsp4_fft}
+ \caption{Sinussingal $10V_{pp}$, $10kHz$}\label{bsp4_fft}
 \end{figure}
 \noindent
 Genau wie in den Berechnungen ist in der Messung zu erkennen, dass alle ungeraden Frquenzanteile quasi 0 ergeben (ca. $-30dB$) und die Amplituden mit steigender Frequenz rasch abnehmen.
@@ -92,6 +93,7 @@ Genau wie in den Berechnungen ist in der Messung zu erkennen, dass alle ungerade
   \begin{center}
     \begin{tabular}{|c|c|c|} \hline
     $n$ & $V_{RMS}$ & Fehler[\%] \\ \hline
+    $0$ & $2,083V$  & $8,1\%$   \\ \hline
     $1$ & $1,325V$    & $11,7\%$\\ \hline
     $2$ & $231,25mV$  & $22,9\%$\\ \hline
     $3$ & $75mV$      & $41,7\%$\\ \hline
@@ -102,4 +104,4 @@ Genau wie in den Berechnungen ist in der Messung zu erkennen, dass alle ungerade
   \caption{Messwerte der f\"unf gr\"o\ss{}ten Spektralen Komponenten} \label{bsp4_SpecMess}
 \end{figure}
 \noindent
-In Tabelle \ref{bsp4_SpecMess} wurden die ersten f\"unf gro\ss{}en Spektralanteile mithilfe der Cursor Funktion gemessen und mit den in Tabelle \ref{bsp4_SpecCalc} berechneten Werten verglichen. Wie unschwer zu erkennen ist, ist der Fehler bereits beim ersten Spektralanteil mit $11,7\%$ sehr gro\ss{}, dies ist unter anderem mit dem Spannunsabfall an den Dioden in der Gleichrichter Schaltung und etwaigen Messungenauigkeiten zu begr\"unden. Auch die Amplitudengenauigkeit der Fensterfunktion spielt hier eine große Rolle.
+In Tabelle \ref{bsp4_SpecMess} wurden die ersten f\"unf gro\ss{}en Spektralanteile mithilfe der Cursor Funktion gemessen und mit den in Tabelle \ref{bsp4_SpecCalc} berechneten Werten verglichen. Wie unschwer zu erkennen ist, ist bereits der Gleichanteil mit $8,1\%$ Fehler behaftet, der Fehler beim ersten Spektralanteil ist mit $11,7\%$ noch um etwas gr\"o\ss{}er. Dies ist unter anderem mit dem Spannunsabfall an den Dioden in der Gleichrichter Schaltung und etwaigen Messungenauigkeiten zu begr\"unden, auch die Amplitudengenauigkeit der Fensterfunktion spielt hier eine große Rolle. Diese Fehler wachsen mit steigender Frequnez sehr rasch, bei $5*f_g$ liegt dieser bereits bei $73,2\%$.
